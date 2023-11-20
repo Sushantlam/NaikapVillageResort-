@@ -30,6 +30,10 @@ connectMongo(process.env.URL).then(()=>{
 
 })
 
+app.get("/",(req,res)=>{
+        res.send("Hello from server")
+    })
+
 app.use("/room", roomRoute )
 app.use("/roomNumber", roomNum )
 app.use("/email", sendEmail )
