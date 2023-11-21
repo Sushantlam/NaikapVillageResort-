@@ -32,6 +32,7 @@ async function createRoom(req, res) {
 async function getAllRoom(req,res){
     try {
         const getAllRoom = await room.find()
+        console.log(getAllRoom);
         res.status(201).json({getAllRoom})
     } catch (error) {
         res.status(500).json(error.message);
